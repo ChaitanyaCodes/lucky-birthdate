@@ -3,26 +3,31 @@ const luckyNumberInput = document.querySelector("#lucky-number");
 const checkBtn = document.querySelector("#check-btn");
 const resultArea = document.querySelector(".result");
 const messageArea = document.querySelector("#message-area");
+const imageArea = document.querySelector(".img");
 
-console.log(messageArea);
+
 
 checkBtn.addEventListener("click", handleCheck);
 
 function handleCheck(){
+    
+    if(resultArea.childNodes[3]){
+        resultArea.removeChild(resultArea.childNodes[3]);
+    }
+
     if(birthdateInput.value && luckyNumberInput.value){
         let sum = getSumOfDigits(birthdateInput.value);
         
         if(sum % luckyNumberInput.value){
-            console.log("not lucky");
-            showMessage("not lucky")
+            showMessage("Ooh Noo!!! Your birthday is not lucky!")
+            setImage("./imgs/unlucky.svg", "unlucky");
         }else{
-            console.log("lucky")
-            showMessage("lucky")
+            showMessage("Ooh wow!!! Your birthday is lucky!");
+            setImage("./imgs/lucky.svg", "lucky");
         }
 
     }else{
-        console.log("not present")
-        // code to show when one of the input fields are not field.
+        showMessage("Please enter all the field.")
     }
     
 }
@@ -30,12 +35,10 @@ function handleCheck(){
 function getSumOfDigits(birthDate){
     let dateDigits = birthDate.split("-");
     let sumOfDigits = 0;
-    dateDigits.forEach( dateElement => {
-        
+    dateDigits.forEach( dateElement => { 
         for(let index = 0; index < dateElement.length; index++){
             sumOfDigits += Number(dateElement[index])
         }
-
     });
 
     return sumOfDigits;
@@ -43,4 +46,11 @@ function getSumOfDigits(birthDate){
 
 function showMessage(msg){
     messageArea.innerText = msg;
+}
+
+function setImage(imgPath, alt){
+    let imageElem = document.createElement('img');
+    imageElem.src = imgPath; 
+    imageElem.alt = alt;
+    resultArea.appendChild(imageElem);
 }
