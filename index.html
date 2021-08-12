@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Is Your birthday Lucky?</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+
+      <div class="container">
+
+        <h2>Enter Your birthdate and lucky number to continue...</h2>
+
+        <div class="input-container">
+          <label for="birthdate">Select your birthdate:</label><input type="date" name="" id="birthdate" />
+        </div>
+
+        <div class="input-container">
+            <label for="lucky-number">Enter your Lucky number:</label><input type="number" name="lucky-number" id="lucky-number" />
+        </div>
+
+        <button id="check-btn">Check</button>
+
+        <div class="result">
+            <p id="message-area"></p>
+        </div>
+      </div>
+
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
