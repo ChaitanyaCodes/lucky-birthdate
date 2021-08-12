@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 :root{
     --container-bg-color : hsl(0, 98.0%, 0.3%);
     --text-color: hsl(166, 99.8%, 47.6%);
@@ -24,7 +26,8 @@ img, .img {
 
 body{
     background-color: rgb(17, 17, 17);
-    color: var(--text-color)
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
@@ -47,7 +50,7 @@ body{
 }
 
 .disclaimer {
-    background-color: #FF7F80;
+    background-color: #ff7f7fd2;
     color: #AC0001;
     border: 1px solid #AC0001;
     border-radius: .5rem;
