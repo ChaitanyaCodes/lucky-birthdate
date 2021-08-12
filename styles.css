@@ -1,0 +1,23 @@
+:root{
+    --container-bg-color : hsl(0, 98.0%, 0.3%);
+    --text-color: hsl(166, 99.8%, 47.6%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: antiquewhite;
+    color: var(--text-color)
+}
+
+.container{
+    background-color: var(--container-bg-color);
+    max-width: 600px;
+    padding: 2rem;
+    margin: 4rem auto;
+    border-radius: 1.5rem;
+}
