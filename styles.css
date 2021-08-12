@@ -84,6 +84,10 @@ footer ul {
     text-align: center;
 }
 
+footer ul li {
+    margin: auto .3rem;
+}
+
 footer .img {
     max-width: 2rem;
 }
